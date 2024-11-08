@@ -4,14 +4,16 @@ import numpy as np
 import pickle
 import os
 from openai import OpenAI
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import utils as ut 
 
-load_dotenv()
+
+# no need this cause we are using streamlit cloud
+# load_dotenv()
 
 # connect to GROQ api
 client = OpenAI(base_url="https://api.groq.com/openai/v1",
-                api_key=os.environ.get("GROQ_API"))
+                api_key=st.secrets["GROQ_API"])
 
 # ----------------------------------
 # using power of GROQ, we will create explanation of the prediction
