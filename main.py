@@ -120,7 +120,7 @@ def explain_predictionss(probability, input_dict, surname, df):
 
     try:
         response = client.chat.completions.create(
-            model="llama-3.2-3b-preview",
+            model="llama-3.3-70b-versatile",
             messages=[{
                 "role": "user",
                 "content": prompt
@@ -179,7 +179,7 @@ HB Bank Customer Care Team
   """
 
   response = client.chat.completions.create(
-    model = "llama-3.2-3b-preview",
+    model = "llama-3.3-70b-versatile",
     messages = [{
       "role" : "user",
       "content" : prompt
